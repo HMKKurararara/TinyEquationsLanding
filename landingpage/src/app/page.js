@@ -50,7 +50,71 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* AI Products Section */}
+        {/* Partners Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted by Leading Organizations</h2>
+              <p className="text-lg text-gray-600">
+                Partnering with educational institutions and technology leaders worldwide
+              </p>
+            </motion.div>
+
+            {/* Partner Logos Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center"
+            >
+              {/* Placeholder logos - replace with actual partner logos */}
+              {[
+                { name: "University Partner", logo: "🏫" },
+                { name: "Tech Partner", logo: "💻" },
+                { name: "Education Board", logo: "📚" },
+                { name: "Research Institute", logo: "🔬" },
+                { name: "School District", logo: "🎓" },
+                { name: "AI Foundation", logo: "🤖" }
+              ].map((partner, index) => (
+                <motion.div
+                  key={partner.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-all duration-300 w-full h-24 flex items-center justify-center cursor-pointer"
+                >
+                  <div className="text-center">
+                    <div className="text-3xl mb-1">{partner.logo}</div>
+                    <div className="text-xs text-gray-500 font-medium">{partner.name}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="text-center mt-8"
+            >
+              <p className="text-gray-500 text-sm">
+                Want to become a partner? <a href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">Get in touch</a>
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* AI Solutions Preview Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -106,13 +170,27 @@ export default function Home() {
                     {product.description}
                   </p>
                   <div className="text-center">
-                    <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                    <a href="/solutions" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
                       Learn More →
-                    </button>
+                    </a>
                   </div>
                 </motion.div>
               ))}
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <a href="/solutions">
+                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  View All Solutions
+                </button>
+              </a>
+            </motion.div>
           </div>
         </section>
 
