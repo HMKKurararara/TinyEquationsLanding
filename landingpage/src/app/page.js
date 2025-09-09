@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [email, setEmail] = useState('');
