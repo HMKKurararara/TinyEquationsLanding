@@ -1,4 +1,3 @@
-// src/components/Header.js
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -10,43 +9,38 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-          Tiny Equations
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="bg-yellow-400 text-black font-bold text-xl px-3 py-1 rounded">
+            TINY<br />EQN
+          </div>
         </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
-            About
+          <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors">
+            Who We Are
           </Link>
-
-          <Link href="/news" className="text-gray-700 hover:text-blue-600 transition-colors">
-            News
-          </Link>
-          <Link href="/events" className="text-gray-700 hover:text-blue-600 transition-colors">
-            Events
-          </Link>
-          <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/solutions" className="text-gray-700 hover:text-gray-900 transition-colors">
             Solutions
           </Link>
-          <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
-            Contact
+          <Link href="/newsletters" className="text-gray-700 hover:text-gray-900 transition-colors">
+            Newsletters
           </Link>
         </div>
 
         {/* CTA Button */}
         <div className="hidden md:block">
           <Link 
-            href="/beta" 
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            href="/contact" 
+            className="bg-yellow-400 text-black px-6 py-2 rounded-lg hover:bg-yellow-500 transition-colors font-medium"
           >
-            Join Beta
+            Contact Us
           </Link>
         </div>
 
         {/* Mobile menu button */}
         <button 
-          className="md:hidden text-gray-700 hover:text-blue-600 transition-colors"
+          className="md:hidden text-gray-700 hover:text-gray-900 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,46 +57,31 @@ export default function Header() {
           <div className="px-4 py-4 space-y-3">
             <Link 
               href="/about" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
+              className="block text-gray-700 hover:text-gray-900 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              About
-            </Link>
-
-            <Link 
-              href="/news" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              News
-            </Link>
-            <Link 
-              href="/events" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Events
+              Who We Are
             </Link>
             <Link 
               href="/solutions" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
+              className="block text-gray-700 hover:text-gray-900 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Solutions
             </Link>
             <Link 
-              href="/contact" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
+              href="/newsletters" 
+              className="block text-gray-700 hover:text-gray-900 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              Newsletters
             </Link>
             <Link 
-              href="/beta" 
-              className="block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center mt-4"
+              href="/contact" 
+              className="block bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-medium text-center mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
-              Join Beta
+              Contact Us
             </Link>
           </div>
         </div>
