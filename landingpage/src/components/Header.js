@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="bg-yellow-400 text-black font-bold text-xl px-3 py-1 rounded">
