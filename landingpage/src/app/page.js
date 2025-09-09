@@ -1,56 +1,69 @@
-// src/app/page.js
 'use client';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
+import { useState } from 'react';
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault();
+    // Handle email submission logic here
+    console.log('Email submitted:', email);
+    setEmail('');
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       <Header />
       
       <main>
         {/* Hero Section */}
-        <motion.section 
-          className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white py-20 lg:py-32"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="container mx-auto px-4 text-center">
-            <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Welcome to <span className="text-yellow-300">Tiny Equations</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Revolutionizing education with cutting-edge AI technology. 
-              From automated marking to personalized tutoring.
-            </motion.p>
-            <motion.div 
-              className="space-x-4 flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Join Beta Program
-              </button>
-              <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Learn More
-              </button>
-            </motion.div>
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                  Breaking Barriers,<br />
+                  Building Brilliance
+                </h1>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  At Tiny Equations, we believe every student deserves a world-class education, no matter their background or location. We're building a new kind of learning environment powered by thinking-driven AI, giving learners the tools to take charge of their own journey.
+                </p>
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  Our solutions—from AI Tutors to Question Generation—adapt to each student's unique pace and style, making self-directed learning a reality.
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg"
+                >
+                  Join us in igniting a new era of learning with no boundaries!
+                </motion.button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative"
+              >
+                {/* Illustration placeholder - you can replace with actual SVG */}
+                <div className="bg-teal-100 rounded-2xl p-8 min-h-96 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">🚀</div>
+                    <div className="text-2xl font-bold text-gray-700">Learning Innovation</div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </motion.section>
+        </section>
 
-        {/* Partners Section */}
+        {/* Supported By Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -60,61 +73,27 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted by Leading Organizations</h2>
-              <p className="text-lg text-gray-600">
-                Partnering with educational institutions and technology leaders worldwide
-              </p>
-            </motion.div>
-
-            {/* Partner Logos Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center"
-            >
-              {/* Placeholder logos - replace with actual partner logos */}
-              {[
-                { name: "University Partner", logo: "🏫" },
-                { name: "Tech Partner", logo: "💻" },
-                { name: "Education Board", logo: "📚" },
-                { name: "Research Institute", logo: "🔬" },
-                { name: "School District", logo: "🎓" },
-                { name: "AI Foundation", logo: "🤖" }
-              ].map((partner, index) => (
-                <motion.div
-                  key={partner.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-all duration-300 w-full h-24 flex items-center justify-center cursor-pointer"
-                >
-                  <div className="text-center">
-                    <div className="text-3xl mb-1">{partner.logo}</div>
-                    <div className="text-xs text-gray-500 font-medium">{partner.name}</div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center mt-8"
-            >
-              <p className="text-gray-500 text-sm">
-                Want to become a partner? <a href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">Get in touch</a>
-              </p>
+              <h2 className="text-2xl font-bold text-teal-600 mb-8">Supported By</h2>
+              <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+                {/* Partner logos - replace with actual logos */}
+                <div className="h-16 px-8 flex items-center">
+                  <div className="text-gray-400 font-semibold">SWMA</div>
+                </div>
+                <div className="h-16 px-8 flex items-center">
+                  <div className="text-yellow-500 font-bold">BABY SHARK FUND</div>
+                </div>
+                <div className="h-16 px-8 flex items-center">
+                  <div className="text-red-600 font-semibold">University Logo</div>
+                </div>
+                <div className="h-16 px-8 flex items-center">
+                  <div className="text-green-600 font-semibold">Partner Logo</div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
 
-        {/* AI Solutions Preview Section */}
+        {/* Why Tiny Equations Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -124,122 +103,225 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">Our AI Solutions</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Discover how our AI-powered tools are transforming education
-              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-teal-600 mb-4">Why Tiny Equations?</h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "AI Marker",
-                  description: "Automated assessment and grading system that provides instant, accurate feedback to students and saves teachers valuable time.",
-                  icon: "✓",
-                  color: "bg-green-500"
+                  icon: "📚",
+                  title: "Syllabus-Aligned Solutions",
+                  description: "Our AI tools are built to match educational standards, ensuring every learner gets accurate, relevant, and contextual support."
                 },
                 {
-                  title: "AI Question Generation",
-                  description: "Generate personalized questions and assessments tailored to individual learning needs and curriculum requirements.",
-                  icon: "?",
-                  color: "bg-blue-500"
+                  icon: "🎯",
+                  title: "Self-Directed Learning",
+                  description: "Learn anytime, anywhere, and at your own pace. Our AI empowers learners to take charge of their learning journey."
                 },
                 {
-                  title: "AI Tutor",
-                  description: "Your personal learning assistant that adapts to your pace, identifies knowledge gaps, and provides targeted support.",
-                  icon: "🎓",
-                  color: "bg-purple-500"
+                  icon: "📝",
+                  title: "Get Feedback Along the Way",
+                  description: "Like a personal tutor by your side—get instant feedback so students can track progress and improve continuously."
+                },
+                {
+                  icon: "📊",
+                  title: "AI-Powered Insights",
+                  description: "Go beyond grades. Our AI analyzes performance and delivers actionable insights to help every learner unlock their potential."
+                },
+                {
+                  icon: "💰",
+                  title: "Free to Start, Fair to Grow",
+                  description: "No student left behind. Our freemium model makes world-class learning accessible to all, regardless of background."
+                },
+                {
+                  icon: "🔄",
+                  title: "Scalability and Adaptability",
+                  description: "From one student to an entire classroom, our solutions adapt seamlessly to diverse learning needs—personalized yet collaborative."
                 }
-              ].map((product, index) => (
+              ].map((feature, index) => (
                 <motion.div
-                  key={product.title}
+                  key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                  className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className={`${product.color} w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto`}>
-                    {product.icon}
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-4 text-gray-800 text-center">
-                    {product.title}
+                  <div className="text-4xl mb-4 text-center">{feature.icon}</div>
+                  <h3 className="text-xl font-bold text-teal-600 mb-4 text-center">
+                    {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-center mb-6">
-                    {product.description}
+                  <p className="text-gray-600 leading-relaxed text-center">
+                    {feature.description}
                   </p>
-                  <div className="text-center">
-                    <a href="/solutions" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-                      Learn More →
-                    </a>
-                  </div>
                 </motion.div>
               ))}
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <a href="/solutions">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  View All Solutions
-                </button>
-              </a>
-            </motion.div>
           </div>
         </section>
 
-        {/* Quick Stats Section */}
+        {/* Work in Progress Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
-              {[
-                { number: "10K+", label: "Students Helped" },
-                { number: "500+", label: "Teachers Using" },
-                { number: "95%", label: "Accuracy Rate" },
-                { number: "50%", label: "Time Saved" }
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-6"
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                  We're still developing!
+                </h2>
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  Currently, our app still in the early stages of our product development and are actively releasing products to fulfill our mission.
+                </p>
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  While we already have a few public ready solutions, we're looking for partners who share our vision to build the future of education, providing feedback, and hence helping us build a practical, impactful solutions.
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg"
                 >
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
+                  Learn more about our solutions
+                </motion.button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                {/* Work in Progress Illustration */}
+                <div className="bg-gray-100 rounded-2xl p-8 min-h-96 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold text-xl mb-4 transform -rotate-12">
+                      WORK IN<br />PROGRESS
+                    </div>
+                    <div className="text-4xl mb-4">⚡</div>
+                    <div className="text-lg font-semibold text-gray-700">Building the Future</div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        {/* Email Signup Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <h2 className="text-4xl font-bold mb-6">Ready to Transform Education?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Join thousands of educators already using our AI tools to enhance learning experiences.
+              <h2 className="text-4xl lg:text-5xl font-bold text-teal-600 mb-8 leading-tight">
+                Let's shape the future<br />
+                of education together!
+              </h2>
+              <p className="text-lg text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
+                We would love for you to join us on our mission to leverage AI to empower self-directed learning for learners from all backgrounds. So if you share our vision, do help us by entering your email below so that we can send you our mailing list for development updates and beta testing of our product!
               </p>
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Get Started Today
-              </button>
+              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email here..."
+                  className="flex-1 px-6 py-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  required
+                />
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  type="submit"
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg"
+                >
+                  Join mailing list
+                </motion.button>
+              </form>
             </motion.div>
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Logo and Description */}
+            <div className="md:col-span-1">
+              <Link href="/" className="flex items-center space-x-2 mb-4">
+                <div className="bg-yellow-400 text-black font-bold text-lg px-3 py-1 rounded">
+                  TINY<br />EQN
+                </div>
+              </Link>
+              <p className="text-sm text-gray-600 mb-4">
+                Breaking Barriers, Building Brilliance
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                  </svg>
+                </a>
+                <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.017 0z"/>
+                  </svg>
+                </a>
+                <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Navigation Links */}
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-4">Home</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><Link href="/about" className="hover:text-gray-900 transition-colors">Who We Are</Link></li>
+                <li><Link href="/solutions" className="hover:text-gray-900 transition-colors">Why Tiny Equations?</Link></li>
+                <li><Link href="/signup" className="hover:text-gray-900 transition-colors">Join Up!</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-4">Who We Are</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><Link href="/mission" className="hover:text-gray-900 transition-colors">How we started</Link></li>
+                <li><Link href="/leadership" className="hover:text-gray-900 transition-colors">Leadership Team</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-4">Our Product</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><Link href="/products" className="hover:text-gray-900 transition-colors">Our Pre & Post-Release Development</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-4">Contact Us</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="mailto:contact@tinyeqn.com" className="hover:text-gray-900 transition-colors">contact@tinyeqn.com</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-8 border-t border-gray-200 text-center">
+            <p className="text-sm text-gray-500">
+              © 2024 Tiny Eqn. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
