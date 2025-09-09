@@ -16,15 +16,15 @@ export default function AboutPage() {
       
       <main>
         {/* Hero Section */}
-        <section className="py-16 lg:py-24 bg-yellow-50">
+        <section className="py-16 lg:py-20 bg-yellow-50">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight mb-4">
                   Tiny Equations, a mission-driven startup that leverages AI to empower learners.
                 </h1>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -40,7 +40,7 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/a436076c7c58a1887a93bac6f3d7e2b0b137b4c4?width=1494" 
                   alt="Tiny EQN Logo" 
-                  className="w-full h-auto rounded-2xl shadow-lg"
+                  className="w-80 h-auto mx-auto rounded-2xl shadow-lg"
                 />
               </motion.div>
             </div>
@@ -48,9 +48,9 @@ export default function AboutPage() {
         </section>
 
         {/* Mission, Values, Vision Section */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
               {/* Illustration */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -59,18 +59,11 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <svg width="165" height="148" viewBox="0 0 165 148" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto max-w-sm mx-auto">
-                  <path d="M82.028 69.8127C79.0783 69.8127 77.076 69.6047 75.1223 72.0469C73.3791 74.2258 76.3063 80.0039 76.4425 79.6634C79.8335 71.1859 62.4258 80.7805 77.5596 80.7805C86.4536 80.7805 85.7461 70.2223 78.372 69.8127C72.8615 69.5065 74.5983 68.0789 70.1461 71.6406C67.029 74.1344 71.4933 80.6109 74.7161 80.7805C78.7696 80.9939 96.1938 70.3346 88.3243 68.0862C80.5456 65.8637 72.8881 66.0725 72.8881 76.2106C72.8881 82.7661 75.1607 86.2645 82.028 86.2645C90.6962 86.2645 89.3399 80.6293 89.3399 73.4686" stroke="#F7D002" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M30.5917 26.9679C12.7047 45.1632 5 58.0669 5 83.7368C5 93.9763 12.1622 107.363 18.2021 115.726C35.5118 139.694 58.0493 142.131 86.4466 142.131C124.752 142.131 153.066 117.225 153.066 78.2529C153.066 61.263 148.278 47.6471 139.255 33.4674C136.076 28.4723 127.851 25.0035 122.397 22.9057C114.833 19.9963 110.81 16 101.883 16C89.3917 16 76.9005 16 64.4093 16C51.2997 16 41.4859 27.0416 32.4197 36.1078" stroke="black" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M50.7284 46.1304C39.7352 57.9596 35 66.3485 35 83.037C35 89.6939 39.4018 98.3972 43.1139 103.834C53.7522 119.416 67.6035 121 85.0562 121C108.598 121 126 104.809 126 79.4718C126 68.4264 123.057 59.5744 117.512 50.3559C115.558 47.1085 110.503 44.8533 107.151 43.4895C102.502 41.5981 100.029 39 94.5432 39C86.8663 39 79.1893 39 71.5123 39C63.4553 39 57.4238 46.1784 51.8519 52.0725" stroke="black" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M69.0494 66.6957C64.8212 71.1677 63 74.3391 63 80.6481C63 83.1648 64.693 86.455 66.1207 88.5105C70.2124 94.4011 75.5398 95 82.2524 95C91.3071 95 98 88.8789 98 79.3003C98 75.1246 96.8682 71.7781 94.7353 68.2931C93.9839 67.0654 92.0396 66.2128 90.7503 65.6973C88.9623 64.9822 88.0113 64 85.9012 64C82.9486 64 79.9959 64 77.0432 64C73.9444 64 71.6245 66.7138 69.4815 68.942" stroke="black" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M151.313 19.1221C145.308 19.7893 133.447 28.479 129.037 32.6684C126.484 35.0936 124.036 36.6543 121.21 38.689C117.255 41.5366 107.683 50.6352 107.965 55.6972C108.257 60.9625 124.886 45.4349 126.929 43.5055C133.178 37.604 140.053 33.4015 147.249 28.6045" stroke="#FEFDFB" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M144 5C142.927 11.3085 140 17.6809 140 24" stroke="#01A077" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M130.419 17C129.027 23.3404 127.044 29.8343 125 35.9649" stroke="#01A077" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M142 27.5522C146.92 25.237 163.693 26.1975 158.256 26.1975" stroke="#01A077" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M128 40.3546C134.761 40.3546 141.442 39 148.319 39" stroke="#01A077" strokeWidth="10" strokeLinecap="round"/>
-                  <path d="M154 15L85 77.5" stroke="black" strokeWidth="10" strokeLinecap="round"/>
-                </svg>
+                <img 
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/82ca05b7826eede69aca2ab0aa6cb291b157a5c0?width=1084" 
+                  alt="AI Learning Illustration" 
+                  className="w-64 h-auto mx-auto"
+                />
               </motion.div>
 
               {/* Mission */}
@@ -82,7 +75,10 @@ export default function AboutPage() {
               >
                 <div className="mb-8">
                   <div className="flex items-center mb-4">
-                    <div className="text-4xl mr-4">🎯</div>
+                    <svg width="50" height="50" viewBox="0 0 134 126" className="mr-4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M51.2844 56.9046C51.2844 50.1571 47.9147 45.9426 44.1279 40.6832C43.3961 39.6668 38.3356 34.0038 36.9714 34.0038C32.7748 34.0038 40.9261 56.7043 43.4122 59.6877C45.8144 62.5703 52.9394 74.7009 56.3734 76.2271M56.3734 76.2271C56.9881 76.5003 55.3125 74.8631 56.3734 76.2271ZM56.3734 76.2271C59.2263 79.8951 62.645 83.4728 66.313 86.3258C69.3028 88.6511 72.4257 90.6547 75.2984 93.0052C81.7236 98.2622 95.8106 86.5943 99.6305 82.3499C107.064 74.09 104.242 69.9878 104.242 59.7672C104.242 57.1313 102.564 50 99.6305 50C93.077 50 86.5407 51.5603 81.3417 56.1094C79.1985 57.9847 64.296 59.796 68 63.5C70.2576 65.7576 84.948 74 88.5 74" stroke="#01A077" strokeWidth="24" strokeLinecap="round"/>
+                      <path d="M53.8179 113.451C30.1951 100.358 16.8763 86.8814 9.98682 64.5192C6.11935 51.9659 9.808 29.0817 30.6402 22.6636C40.7778 19.5404 55.791 26.5186 58.1026 34.0217C59.7428 39.3454 61.383 44.6692 63.0231 49.993C64.9351 56.199 77.1331 43.4526 82.2836 39.914C110.413 20.5879 126.292 50.4838 119.756 68.7841C111.954 90.6314 90.2351 106.895 63.8844 115.013" stroke="black" strokeWidth="10" strokeLinecap="round"/>
+                    </svg>
                     <h2 className="text-2xl font-bold text-teal-600">Our Mission</h2>
                   </div>
                   <p className="text-gray-700 leading-relaxed text-lg mb-4">
@@ -105,30 +101,33 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4">💚</div>
+                  <svg width="50" height="50" viewBox="0 0 134 126" className="mr-4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M51.2844 56.9046C51.2844 50.1571 47.9147 45.9426 44.1279 40.6832C43.3961 39.6668 38.3356 34.0038 36.9714 34.0038C32.7748 34.0038 40.9261 56.7043 43.4122 59.6877C45.8144 62.5703 52.9394 74.7009 56.3734 76.2271M56.3734 76.2271C56.9881 76.5003 55.3125 74.8631 56.3734 76.2271ZM56.3734 76.2271C59.2263 79.8951 62.645 83.4728 66.313 86.3258C69.3028 88.6511 72.4257 90.6547 75.2984 93.0052C81.7236 98.2622 95.8106 86.5943 99.6305 82.3499C107.064 74.09 104.242 69.9878 104.242 59.7672C104.242 57.1313 102.564 50 99.6305 50C93.077 50 86.5407 51.5603 81.3417 56.1094C79.1985 57.9847 64.296 59.796 68 63.5C70.2576 65.7576 84.948 74 88.5 74" stroke="#01A077" strokeWidth="24" strokeLinecap="round"/>
+                    <path d="M53.8179 113.451C30.1951 100.358 16.8763 86.8814 9.98682 64.5192C6.11935 51.9659 9.808 29.0817 30.6402 22.6636C40.7778 19.5404 55.791 26.5186 58.1026 34.0217C59.7428 39.3454 61.383 44.6692 63.0231 49.993C64.9351 56.199 77.1331 43.4526 82.2836 39.914C110.413 20.5879 126.292 50.4838 119.756 68.7841C111.954 90.6314 90.2351 106.895 63.8844 115.013" stroke="black" strokeWidth="10" strokeLinecap="round"/>
+                  </svg>
                   <h2 className="text-2xl font-bold text-teal-600">Our Values</h2>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2 text-lg">Empowerment:</h3>
-                    <p className="text-gray-600 text-lg">Providing students with solutions they need to support their studies effectively.</p>
+                    <h3 className="font-bold text-gray-900 mb-2">Empowerment:</h3>
+                    <p className="text-gray-600">Providing students with solutions they need to support their studies effectively.</p>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2 text-lg">Innovation:</h3>
-                    <p className="text-gray-600 text-lg">Continuously exploring new ways to improve education through technology.</p>
+                    <h3 className="font-bold text-gray-900 mb-2">Innovation:</h3>
+                    <p className="text-gray-600">Continuously exploring new ways to improve education through technology.</p>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2 text-lg">Collaboration:</h3>
-                    <p className="text-gray-600 text-lg">Partnering with educators to create impactful, student-friendly solutions.</p>
+                    <h3 className="font-bold text-gray-900 mb-2">Collaboration:</h3>
+                    <p className="text-gray-600">Partnering with educators to create impactful, student-friendly solutions.</p>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2 text-lg">Inclusivity:</h3>
-                    <p className="text-gray-600 text-lg">Ensuring that every student, regardless of background or learning ability, has equal opportunities.</p>
+                    <h3 className="font-bold text-gray-900 mb-2">Inclusivity:</h3>
+                    <p className="text-gray-600">Ensuring that every student, regardless of background or learning ability, has equal opportunities.</p>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2 text-lg">Purpose-Driven:</h3>
-                    <p className="text-gray-600 text-lg">Focused on breaking barriers, making a meaningful differences in education and communities.</p>
+                    <h3 className="font-bold text-gray-900 mb-2">Purpose-Driven:</h3>
+                    <p className="text-gray-600">Focused on breaking barriers, making meaningful differences in education and communities.</p>
                   </div>
                 </div>
               </motion.div>
@@ -141,40 +140,34 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4">💡</div>
+                  <div className="w-12 h-12 mr-4 flex items-center justify-center">
+                    <div className="w-10 h-16 bg-yellow-400 rounded-full relative">
+                      <div className="absolute inset-2 bg-yellow-300 rounded-full"></div>
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-8 bg-black rounded-sm"></div>
+                      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-white rounded"></div>
+                      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-white rounded"></div>
+                    </div>
+                  </div>
                   <h2 className="text-2xl font-bold text-teal-600">Our Vision</h2>
                 </div>
                 
-                <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                <p className="text-gray-700 leading-relaxed mb-6">
                   We imagine a world where every student—whether in a bustling city or a rural village without schools—has access to personalised, high-quality learning. A world where AI is not just a provider of answers, but a thought partner, a coach, and a builder of confidence. We aim to break barriers in traditional education, making self-directed learning possible in every corner of the globe. While empowering students, we also support schools and teachers to move beyond conventional methods, unlocking new ways to unleash brilliance and nurture potential.
                 </p>
                 
-                {/* Icons representing features */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-3xl mb-2">⚙️</div>
-                    <p className="text-sm text-gray-600">Smart Technology</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl mb-2">🧠</div>
-                    <p className="text-sm text-gray-600">AI Learning</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl mb-2">📱</div>
-                    <p className="text-sm text-gray-600">Mobile Access</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl mb-2">🌍</div>
-                    <p className="text-sm text-gray-600">Global Reach</p>
-                  </div>
-                </div>
+                {/* Vision Icons */}
+                <img 
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/bb76a72fc05d266865a3cc6aec5866282f458273?width=1260" 
+                  alt="Vision Icons" 
+                  className="w-48 h-auto"
+                />
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* How We Started Section */}
-        <section className="py-20 bg-yellow-50">
+        <section className="py-16 bg-yellow-50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -183,7 +176,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">Here's how we started!</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Here's how we started!</h2>
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -193,14 +186,14 @@ export default function AboutPage() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                   Tiny Equations was founded by Matthew, Koko, and Ayra to empower both learners and educators with AI-driven solutions that enhance educational support. What started as an idea to bridge educational gaps has grown into a mission-driven initiative developing innovative solutions for learners.
                 </p>
                 
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/eac3369626bd98dbbcacaab6aaa89143a4af2017?width=1616" 
                   alt="Startup Foundation" 
-                  className="w-full h-auto rounded-2xl mb-8"
+                  className="w-72 h-auto rounded-2xl mb-6"
                 />
               </motion.div>
               
@@ -214,7 +207,7 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/dc0317e669bb820922bfb838a72e2c3b5c9d887f?width=1196" 
                   alt="SWMA Technology and Design" 
-                  className="w-full h-auto rounded-2xl mb-8"
+                  className="w-60 h-auto rounded-2xl mb-6"
                 />
                 
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -226,20 +219,20 @@ export default function AboutPage() {
         </section>
 
         {/* Leadership Team Section */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-teal-600 mb-4">Leadership Team</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-teal-600 mb-4">Leadership Team</h2>
             </motion.div>
 
             {/* First Row - 3 Team Members */}
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
               {/* Matthew's Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -251,13 +244,13 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/8783f661e03f95b0d7df33308d1fd439be0b2619?width=506" 
                   alt="Matthew Phua Tai Kit" 
-                  className="w-full h-auto rounded-lg shadow-md mb-4"
+                  className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
                 
-                <h3 className="text-xl font-bold text-teal-700 mb-2">
+                <h3 className="text-lg font-bold text-teal-700 mb-2">
                   Matthew Phua Tai Kit
                 </h3>
-                <p className="text-gray-800 mb-4 leading-relaxed">
+                <p className="text-gray-800 mb-4 text-sm leading-relaxed">
                   Co-Founder<br />
                   Executive Director<br />
                   (Business, Finance and Operations)
@@ -265,7 +258,7 @@ export default function AboutPage() {
                 
                 <button 
                   onClick={openMatthewPopup}
-                  className="text-gray-800 hover:text-teal-600 transition-colors underline"
+                  className="text-gray-800 hover:text-teal-600 transition-colors underline text-sm"
                 >
                   Read More
                 </button>
@@ -282,18 +275,18 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/7b3e7f77088b66ad63fcc0d46ac5afd79b5ab414?width=506" 
                   alt="Htet Myat Ko Ko (Koko)" 
-                  className="w-full h-auto rounded-lg shadow-md mb-4"
+                  className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
                 
-                <h3 className="text-xl font-bold text-teal-700 mb-2">
+                <h3 className="text-lg font-bold text-teal-700 mb-2">
                   Htet Myat Ko Ko (Koko)
                 </h3>
-                <p className="text-gray-800 mb-4 leading-relaxed">
+                <p className="text-gray-800 mb-4 text-sm leading-relaxed">
                   Co-Founder<br />
                   Executive Director
                 </p>
                 
-                <p className="text-gray-800 hover:text-teal-600 transition-colors underline">
+                <p className="text-gray-800 hover:text-teal-600 transition-colors underline text-sm">
                   Read More
                 </p>
               </motion.div>
@@ -309,25 +302,25 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/a30fb91bfd9015333ef1d866e01d402bccf8ec63?width=502" 
                   alt="Ayra Binti Mohammed" 
-                  className="w-full h-auto rounded-lg shadow-md mb-4"
+                  className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
                 
-                <h3 className="text-xl font-bold text-teal-700 mb-2">
+                <h3 className="text-lg font-bold text-teal-700 mb-2">
                   Ayra Binti Mohammed
                 </h3>
-                <p className="text-gray-800 mb-4 leading-relaxed">
+                <p className="text-gray-800 mb-4 text-sm leading-relaxed">
                   Co-Founder<br />
                   Executive Director
                 </p>
                 
-                <p className="text-gray-800 hover:text-teal-600 transition-colors underline">
+                <p className="text-gray-800 hover:text-teal-600 transition-colors underline text-sm">
                   Read More
                 </p>
               </motion.div>
             </div>
 
             {/* Second Row - 2 Team Members */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {/* Htet Aung Shine's Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -339,13 +332,13 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/e29cd2c3c60dd79291908f9787a47731f89ad748?width=506" 
                   alt="Htet Aung Shine" 
-                  className="w-full h-auto rounded-lg shadow-md mb-4"
+                  className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
                 
-                <h3 className="text-xl font-bold text-teal-700 mb-2">
+                <h3 className="text-lg font-bold text-teal-700 mb-2">
                   Htet Aung Shine
                 </h3>
-                <p className="text-gray-800 mb-4 leading-relaxed">
+                <p className="text-gray-800 mb-4 text-sm leading-relaxed">
                   Head<br />
                   Application Engineering
                 </p>
@@ -362,13 +355,13 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/02afd66e247e18de72e88241fcb2be19b4bdfffa?width=506" 
                   alt="Yong Yee Khee" 
-                  className="w-full h-auto rounded-lg shadow-md mb-4"
+                  className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
                 
-                <h3 className="text-xl font-bold text-teal-700 mb-2">
+                <h3 className="text-lg font-bold text-teal-700 mb-2">
                   Yong Yee Khee
                 </h3>
-                <p className="text-gray-800 mb-4 leading-relaxed">
+                <p className="text-gray-800 mb-4 text-sm leading-relaxed">
                   Head<br />
                   Internal Systems Ops & Dev Ops
                 </p>
@@ -467,7 +460,7 @@ export default function AboutPage() {
       )}
 
       {/* Footer */}
-      <footer className="bg-white py-16">
+      <footer className="bg-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
             {/* Logo and Description */}
@@ -476,15 +469,15 @@ export default function AboutPage() {
                 <img 
                   src="https://api.builder.io/api/v1/image/assets/TEMP/dea36f06fd85ff4c20c5ebbc5c30c512be752b76?width=240" 
                   alt="Tiny EQN Logo" 
-                  className="h-16 w-auto"
+                  className="h-12 w-auto"
                 />
               </Link>
               <p className="text-sm text-gray-600 mb-4">
                 Breaking Barriers, Building Brilliance
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3">
                 <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
+                  <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
                     <g clipPath="url(#clip0_2046_126)">
                       <rect width="48" height="48" rx="24" fill="#FEFDFB"/>
                       <path d="M24 0C10.7453 0 0 10.7453 0 24C0 35.255 7.74912 44.6995 18.2026 47.2934V31.3344H13.2538V24H18.2026V20.8397C18.2026 12.671 21.8995 8.8848 29.9194 8.8848C31.44 8.8848 34.0637 9.18336 35.137 9.48096V16.129C34.5706 16.0694 33.5866 16.0397 32.3645 16.0397C28.4294 16.0397 26.9088 17.5306 26.9088 21.4061V24H34.7482L33.4013 31.3344H26.9088V47.8243C38.7926 46.3891 48.001 36.2707 48.001 24C48 10.7453 37.2547 0 24 0Z" fill="black"/>
@@ -492,7 +485,7 @@ export default function AboutPage() {
                   </svg>
                 </a>
                 <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
+                  <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
                     <g clipPath="url(#clip0_2046_127)">
                       <path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70313 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3313 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2813 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="#000100"/>
                       <path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="#000100"/>
@@ -501,7 +494,7 @@ export default function AboutPage() {
                   </svg>
                 </a>
                 <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
+                  <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
                     <g clipPath="url(#clip0_2046_128)">
                       <path d="M44.4469 0H3.54375C1.58437 0 0 1.54688 0 3.45938V44.5312C0 46.4437 1.58437 48 3.54375 48H44.4469C46.4063 48 48 46.4438 48 44.5406V3.45938C48 1.54688 46.4063 0 44.4469 0ZM14.2406 40.9031H7.11563V17.9906H14.2406V40.9031ZM10.6781 14.8688C8.39063 14.8688 6.54375 13.0219 6.54375 10.7437C6.54375 8.46562 8.39063 6.61875 10.6781 6.61875C12.9563 6.61875 14.8031 8.46562 14.8031 10.7437C14.8031 13.0125 12.9563 14.8688 10.6781 14.8688ZM40.9031 40.9031H33.7875V29.7656C33.7875 27.1125 33.7406 23.6906 30.0844 23.6906C26.3812 23.6906 25.8187 26.5875 25.8187 29.5781V40.9031H18.7125V17.9906H25.5375V21.1219H25.6312C26.5781 19.3219 28.9031 17.4188 32.3625 17.4188C39.5719 17.4188 40.9031 22.1625 40.9031 28.3313V40.9031V40.9031Z" fill="black"/>
                     </g>
@@ -512,8 +505,8 @@ export default function AboutPage() {
 
             {/* Navigation Links */}
             <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Home</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="font-semibold text-gray-900 mb-3 text-sm">Home</h3>
+              <ul className="space-y-2 text-xs text-gray-600">
                 <li><Link href="/" className="hover:text-gray-900 transition-colors">Supported By</Link></li>
                 <li><Link href="/" className="hover:text-gray-900 transition-colors">Why Tiny Equations?</Link></li>
                 <li><Link href="/" className="hover:text-gray-900 transition-colors">Mailing List</Link></li>
@@ -521,8 +514,8 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Who We Are</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="font-semibold text-gray-900 mb-3 text-sm">Who We Are</h3>
+              <ul className="space-y-2 text-xs text-gray-600">
                 <li><Link href="/about" className="hover:text-gray-900 transition-colors">Our Mission & Vision</Link></li>
                 <li><Link href="/about" className="hover:text-gray-900 transition-colors">How we started</Link></li>
                 <li><Link href="/about" className="hover:text-gray-900 transition-colors">Leadership Team</Link></li>
@@ -530,23 +523,23 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Our Product</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="font-semibold text-gray-900 mb-3 text-sm">Our Product</h3>
+              <ul className="space-y-2 text-xs text-gray-600">
                 <li><Link href="/products" className="hover:text-gray-900 transition-colors">Our Plan & Features</Link></li>
                 <li><Link href="/products" className="hover:text-gray-900 transition-colors">Development</Link></li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Contact Us</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="font-semibold text-gray-900 mb-3 text-sm">Contact Us</h3>
+              <ul className="space-y-2 text-xs text-gray-600">
                 <li><a href="mailto:contact@tinyeqn.com" className="hover:text-gray-900 transition-colors">contact@tinyeqn.com</a></li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-gray-200 text-center">
-            <p className="text-sm text-gray-500">
+          <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+            <p className="text-xs text-gray-500">
               © 2025 TinyEqn. All rights reserved
             </p>
           </div>
