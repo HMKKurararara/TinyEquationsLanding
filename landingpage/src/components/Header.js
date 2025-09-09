@@ -10,7 +10,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="bg-yellow-400 text-black font-bold text-xl px-3 py-1 rounded">
+          <div className="bg-yellow-400 text-black font-bold text-base leading-tight px-2.5 py-0.5 rounded">
             TINY<br />EQN
           </div>
         </Link>
