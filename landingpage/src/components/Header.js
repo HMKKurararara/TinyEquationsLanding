@@ -7,12 +7,14 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <nav className="container mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="bg-yellow-400 text-black font-bold text-base leading-tight px-2.5 py-0.5 rounded">
-            TINY<br />EQN
-          </div>
+          <img 
+            src="/tinyeqn_crop.png" 
+            alt="Tiny EQN Logo" 
+            className="h-12 w-auto"
+          />
         </Link>
         
         {/* Desktop Navigation */}

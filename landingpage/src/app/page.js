@@ -38,13 +38,9 @@ export default function Home() {
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                   Our solutions—from AI Tutors to Question Generation—adapt to each student's unique pace and style, making self-directed learning a reality.
                 </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg"
-                >
+                <p className="bg-yellow-300 text-black px-4 py-2 rounded-md font-medium shadow-sm inline-block">
                   Join us in igniting a new era of learning with no boundaries!
-                </motion.button>
+                </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -52,13 +48,11 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                {/* Illustration placeholder - you can replace with actual SVG */}
-                <div className="bg-teal-100 rounded-2xl p-8 min-h-96 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">🚀</div>
-                    <div className="text-2xl font-bold text-gray-700">Learning Innovation</div>
-                  </div>
-                </div>
+                <img 
+                  src="/main1.svg" 
+                  alt="Learning Innovation" 
+                  className="w-full h-auto max-w-lg mx-auto"
+                />
               </motion.div>
             </div>
           </div>
@@ -78,16 +72,32 @@ export default function Home() {
               <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
                 {/* Partner logos - replace with actual logos */}
                 <div className="h-16 px-8 flex items-center">
-                  <div className="text-gray-400 font-semibold">SWMA</div>
+                  <img 
+                    src="/sutd_logo.png" 
+                    alt="SUTD" 
+                    className="h-12 w-auto"
+                  />
                 </div>
                 <div className="h-16 px-8 flex items-center">
-                  <div className="text-yellow-500 font-bold">BABY SHARK FUND</div>
+                  <img 
+                    src="/bsf_logo.png" 
+                    alt="Baby Shark Fund" 
+                    className="h-12 w-auto"
+                  />
                 </div>
                 <div className="h-16 px-8 flex items-center">
-                  <div className="text-red-600 font-semibold">University Logo</div>
+                  <img 
+                    src="/cuhk_logo.png" 
+                    alt="CUHK" 
+                    className="h-12 w-auto"
+                  />
                 </div>
                 <div className="h-16 px-8 flex items-center">
-                  <div className="text-green-600 font-semibold">Partner Logo</div>
+                  <img 
+                    src="/ayraschool_logo.png" 
+                    alt="Ayra School" 
+                    className="h-12 w-auto"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -148,7 +158,47 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className="text-4xl mb-4 text-center">{feature.icon}</div>
+                  <div className="flex justify-center mb-4">
+                    {feature.title === "Syllabus-Aligned Solutions" ? (
+                      <img 
+                        src="/syllabus_aligned_clipart.svg" 
+                        alt={feature.title} 
+                        className="h-20 w-20"
+                      />
+                    ) : feature.title === "Self-Directed Learning" ? (
+                      <img 
+                        src="/self-directed_clipart.svg" 
+                        alt={feature.title} 
+                        className="h-20 w-20"
+                      />
+                    ) : feature.title === "Get Feedback Along the Way" ? (
+                      <img 
+                        src="/feedback_clipart.svg" 
+                        alt={feature.title} 
+                        className="h-20 w-20"
+                      />
+                    ) : feature.title === "AI-Powered Insights" ? (
+                      <img 
+                        src="/insights_clipart.svg" 
+                        alt={feature.title} 
+                        className="h-20 w-20"
+                      />
+                    ) : feature.title === "Free to Start, Fair to Grow" ? (
+                      <img 
+                        src="/free_clipart.svg" 
+                        alt={feature.title} 
+                        className="h-20 w-20"
+                      />
+                    ) : feature.title === "Scalability and Adaptability" ? (
+                      <img 
+                        src="/scale_clipart.png" 
+                        alt={feature.title} 
+                        className="h-20 w-20"
+                      />
+                    ) : (
+                      <div className="text-4xl text-center">{feature.icon}</div>
+                    )}
+                  </div>
                   <h3 className="text-xl font-bold text-teal-600 mb-4 text-center">
                     {feature.title}
                   </h3>
@@ -196,15 +246,11 @@ export default function Home() {
                 className="relative"
               >
                 {/* Work in Progress Illustration */}
-                <div className="bg-gray-100 rounded-2xl p-8 min-h-96 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold text-xl mb-4 transform -rotate-12">
-                      WORK IN<br />PROGRESS
-                    </div>
-                    <div className="text-4xl mb-4">⚡</div>
-                    <div className="text-lg font-semibold text-gray-700">Building the Future</div>
-                  </div>
-                </div>
+                <img 
+                  src="/work_in_progress.svg" 
+                  alt="Work in Progress - Building the Future" 
+                  className="w-full h-auto max-w-lg mx-auto"
+                />
               </motion.div>
             </div>
           </div>
@@ -233,7 +279,7 @@ export default function Home() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email here..."
-                  className="flex-1 px-6 py-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="flex-1 px-6 py-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent placeholder-gray-500 text-black"
                   required
                 />
                 <motion.button
@@ -256,9 +302,9 @@ export default function Home() {
           <div className="grid md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
             {/* Logo and Description */}
             <div className="md:col-span-1">
-              <Link href="/" className="flex items-center space-x-2 mb-4">
+              <Link href="/" className="flex items-center space-x-2 mb-2">
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/dea36f06fd85ff4c20c5ebbc5c30c512be752b76?width=240" 
+                  src="/tinyeqn_crop.png" 
                   alt="Tiny EQN Logo" 
                   className="h-12 w-auto"
                 />
