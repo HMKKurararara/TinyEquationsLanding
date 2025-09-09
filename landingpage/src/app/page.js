@@ -253,7 +253,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
             {/* Logo and Description */}
             <div className="md:col-span-1">
               <Link href="/" className="flex items-center space-x-2 mb-4">
