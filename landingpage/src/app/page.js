@@ -20,7 +20,7 @@ export default function Home() {
       
       <main>
         {/* Hero Section */}
-        <section className="py-16 lg:py-24">
+        <section className="py-16 lg:py-24 bg-yellow-50">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -219,7 +219,7 @@ export default function Home() {
         </section>
 
         {/* Work in Progress Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-yellow-100">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -348,8 +348,8 @@ export default function Home() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-3 text-sm">Our Product</h3>
               <ul className="space-y-2 text-xs text-gray-600">
-                <li><Link href="/products" className="hover:text-gray-900 transition-colors">Our Plan & Features</Link></li>
-                <li><Link href="/products" className="hover:text-gray-900 transition-colors">Development</Link></li>
+                <li><Link href="/solutions" className="hover:text-gray-900 transition-colors">Our Plan & Features</Link></li>
+                <li><Link href="/solutions" className="hover:text-gray-900 transition-colors">Development</Link></li>
               </ul>
             </div>
 

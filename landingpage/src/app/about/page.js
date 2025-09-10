@@ -160,7 +160,7 @@ export default function AboutPage() {
                 <img 
                   src="/about_3.png" 
                   alt="Vision Icons" 
-                  className="w-90 h-auto"
+                  className="w-90 h-auto mx-auto"
                 />
               </motion.div>
             </div>
@@ -670,8 +670,8 @@ export default function AboutPage() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-3 text-sm">Our Product</h3>
               <ul className="space-y-2 text-xs text-gray-600">
-                <li><Link href="/products" className="hover:text-gray-900 transition-colors">Our Plan & Features</Link></li>
-                <li><Link href="/products" className="hover:text-gray-900 transition-colors">Development</Link></li>
+                <li><Link href="/solutions" className="hover:text-gray-900 transition-colors">Our Plan & Features</Link></li>
+                <li><Link href="/solutions" className="hover:text-gray-900 transition-colors">Development</Link></li>
               </ul>
             </div>
 

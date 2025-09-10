@@ -87,6 +87,8 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Location</h3>
                       <p className="text-gray-600">
+                        Table 17 & 18<br />
+                        Building 1 Level 6, 1.605A Incubation Room<br />
                         Singapore University of Technology and Design<br />
                         8 Somapah Road<br />
                         Singapore 487372
