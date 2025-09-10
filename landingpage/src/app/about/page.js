@@ -6,9 +6,15 @@ import Header from '../../components/Header';
 
 export default function AboutPage() {
   const [isMatthewPopupOpen, setIsMatthewPopupOpen] = useState(false);
+  const [isKokoPopupOpen, setIsKokoPopupOpen] = useState(false);
+  const [isAyraPopupOpen, setIsAyraPopupOpen] = useState(false);
 
   const openMatthewPopup = () => setIsMatthewPopupOpen(true);
   const closeMatthewPopup = () => setIsMatthewPopupOpen(false);
+  const openKokoPopup = () => setIsKokoPopupOpen(true);
+  const closeKokoPopup = () => setIsKokoPopupOpen(false);
+  const openAyraPopup = () => setIsAyraPopupOpen(true);
+  const closeAyraPopup = () => setIsAyraPopupOpen(false);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -190,8 +196,8 @@ export default function AboutPage() {
                 </p>
                 
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/eac3369626bd98dbbcacaab6aaa89143a4af2017?width=1616" 
-                  alt="Startup Foundation" 
+                  src="/bsf_clipart.svg" 
+                  alt="BSF Clipart" 
                   className="w-72 h-auto rounded-2xl mb-6"
                 />
               </motion.div>
@@ -204,8 +210,8 @@ export default function AboutPage() {
                 className="relative"
               >
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/dc0317e669bb820922bfb838a72e2c3b5c9d887f?width=1196" 
-                  alt="SWMA Technology and Design" 
+                  src="/sud_rock.svg" 
+                  alt="SUTD Rock" 
                   className="w-60 h-auto rounded-2xl mb-6"
                 />
                 
@@ -231,17 +237,17 @@ export default function AboutPage() {
             </motion.div>
 
             {/* First Row - 3 Team Members */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="flex flex-wrap justify-center gap-6 mb-12">
               {/* Matthew's Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center"
+                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center w-full sm:w-80"
               >
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/8783f661e03f95b0d7df33308d1fd439be0b2619?width=506" 
+                  src="/Matthew.png" 
                   alt="Matthew Phua Tai Kit" 
                   className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
@@ -268,10 +274,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center"
+                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center w-full sm:w-80"
               >
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/7b3e7f77088b66ad63fcc0d46ac5afd79b5ab414?width=506" 
+                  src="/Koko.png" 
                   alt="Htet Myat Ko Ko (Koko)" 
                   className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
@@ -284,9 +290,12 @@ export default function AboutPage() {
                   Executive Director
                 </p>
                 
-                <p className="text-gray-800 hover:text-teal-600 transition-colors underline text-sm">
+                <button 
+                  onClick={openKokoPopup}
+                  className="text-gray-800 hover:text-teal-600 transition-colors underline text-sm"
+                >
                   Read More
-                </p>
+                </button>
               </motion.div>
 
               {/* Ayra's Card */}
@@ -295,10 +304,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center"
+                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center w-full sm:w-80"
               >
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/a30fb91bfd9015333ef1d866e01d402bccf8ec63?width=502" 
+                  src="/Ayra.png" 
                   alt="Ayra Binti Mohammed" 
                   className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
@@ -311,24 +320,28 @@ export default function AboutPage() {
                   Executive Director
                 </p>
                 
-                <p className="text-gray-800 hover:text-teal-600 transition-colors underline text-sm">
+                <button 
+                  onClick={openAyraPopup}
+                  className="text-gray-800 hover:text-teal-600 transition-colors underline text-sm"
+                >
                   Read More
-                </p>
+                </button>
               </motion.div>
             </div>
 
             {/* Second Row - 2 Team Members */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-6">
+              
               {/* Htet Aung Shine's Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center"
+                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center w-full sm:w-80"
               >
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/e29cd2c3c60dd79291908f9787a47731f89ad748?width=506" 
+                  src="/Htet.png" 
                   alt="Htet Aung Shine" 
                   className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
@@ -348,10 +361,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center"
+                className="bg-cream-white rounded-2xl p-6 shadow-lg text-center w-full sm:w-80"
               >
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/02afd66e247e18de72e88241fcb2be19b4bdfffa?width=506" 
+                  src="/YeeKhee.png" 
                   alt="Yong Yee Khee" 
                   className="w-40 h-52 object-cover rounded-lg shadow-md mb-4 mx-auto"
                 />
@@ -393,7 +406,7 @@ export default function AboutPage() {
               {/* Photo */}
               <div className="md:col-span-1">
                 <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/fcda1450eaeafbbbb5402e55c66e66c4259b5b05?width=460" 
+                  src="/Matthew.png" 
                   alt="Matthew Phua Tai Kit" 
                   className="w-full rounded-lg shadow-md"
                 />
@@ -419,28 +432,19 @@ export default function AboutPage() {
                   </p>
                   
                   {/* LinkedIn Icon */}
-                  <a href="#" className="inline-block">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clipPath="url(#clip0_2030_41)">
-                        <path d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z" fill="black"/>
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_2030_41">
-                          <rect width="28" height="28" fill="white"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                  <a href="https://www.linkedin.com/in/matthewphua/" target="_blank" rel="noopener noreferrer" className="inline-block">
+                    <img src="/linkedin_logo.svg" alt="LinkedIn" className="w-7 h-7" />
                   </a>
                 </div>
                 
                 {/* Full Bio */}
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Matthew co-founded Tiny Equations and today serves as its Executive Director, where he leads business strategy, finance, and operations while staying closely involved in product development. From the very beginning, he helped shape the company's vision, drove its incorporation, and built the internal structures that allow the team to work efficiently as a fast-growing startup.
+                    Matthew co-founded Tiny Equations and today serves as its Executive Director, where he leads business strategy, finance, and operations while staying closely involved in product development. From the very beginning, he helped shape the company's vision, drove its incorporation, and built the internal structures that allow the team to work efficiently as a fast-growing startup. He also leads a team in product development, ensuring that ideas are translated into practical solutions that serve real educational needs.
                   </p>
                   
                   <p>
-                    Beyond Tiny Equations, Matthew is the Founder and Managing Director of SolvingSeeds Sdn. Bhd., a technology company based in Malaysia. His leadership across both ventures reflects his entrepreneurial drive and belief in creating meaningful technology with real-world impact.
+                    Beyond Tiny Equations, Matthew is the Founder and Managing Director of SolvingSeeds Sdn. Bhd., a technology company based in Malaysia. His leadership across both ventures reflects his entrepreneurial drive and belief in creating meaningful technology with real-world impact. Matthew has also hosted education workshops and crash-courses for secondary school students, reflecting his strong belief in making quality learning more accessible.
                   </p>
                   
                   <p>
@@ -449,6 +453,168 @@ export default function AboutPage() {
                   
                   <p>
                     At Tiny Equations, Matthew focuses on managing resources to keep the company financially healthy, ensuring compliance, and building trusted relationships with partners and stakeholders. His blend of strategic vision and hands-on execution continues to drive the company forward in its early growth stages.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Koko's Popup Modal */}
+      {isKokoPopupOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="bg-white rounded-2xl p-8 max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl"
+          >
+            {/* Close Button */}
+            <div className="flex justify-end mb-4">
+              <button 
+                onClick={closeKokoPopup}
+                className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+              >
+                ×
+              </button>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Photo */}
+              <div className="md:col-span-1">
+                <img 
+                  src="/Koko.png" 
+                  alt="Htet Myat Ko Ko (Koko)" 
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="md:col-span-2">
+                <h3 className="text-3xl font-bold text-teal-700 mb-2">
+                  Htet Myat Ko Ko (Koko)
+                </h3>
+                <p className="text-xl text-gray-800 mb-4 leading-relaxed">
+                  Co-Founder<br />
+                  Executive Director<br />
+                  (Product Development)
+                </p>
+                
+                <div className="mb-6">
+                  <p className="text-gray-700 mb-2">
+                    <strong>Email:</strong> koko_hm@tinyeqn.com
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Phone:</strong> (65) 9634 4183
+                  </p>
+                  
+                  {/* LinkedIn Icon */}
+                  <a href="https://www.linkedin.com/in/htet-myat-ko-ko-165208192/" target="_blank" rel="noopener noreferrer" className="inline-block">
+                    <img src="/linkedin_logo.svg" alt="LinkedIn" className="w-7 h-7" />
+                  </a>
+                </div>
+                
+                {/* Full Bio */}
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Koko co-founded Tiny Equations and today serves as its Executive Director, leading product development and guiding the company's technical vision. From the start, he drove rapid product development, designing the architecture of Tiny Equations' platforms and leading a team of developers to build the first working prototypes. His leadership in custom algorithm design and system architecture has been central to the company's early success.
+                  </p>
+                  
+                  <p>
+                    In 2025, Koko won the Singapore Valley Awards (SVA) by pitching Tiny Equations as a business idea, earning recognition for the startup's potential and receiving a fully sponsored internship opportunity in China.
+                  </p>
+                  
+                  <p>
+                    Before Tiny Equations, Koko founded Candellar, an education centre originally based in Myanmar with operations in Singapore. His passion for education began early, starting as a private tutor after his O-levels, and grew into building organisations that combine education with technology.
+                  </p>
+                  
+                  <p>
+                    Currently a Year 3 undergraduate at the Singapore University of Technology and Design (SUTD), Koko is pursuing a Bachelor of Engineering in Computer Science and Design, specialising in Artificial Intelligence and Machine Learning. His strong interest in AI and ML has shaped how Tiny Equations develops innovative solutions for real-world use.
+                  </p>
+                  
+                  <p>
+                    At Tiny Equations, Koko leads the development team to deliver functional prototypes that have gained recognition from local teachers, students, and even international institutions such as a university in China. His ability to translate bold ideas into working products continues to drive the company's innovation and growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Ayra's Popup Modal */}
+      {isAyraPopupOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="bg-white rounded-2xl p-8 max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl"
+          >
+            {/* Close Button */}
+            <div className="flex justify-end mb-4">
+              <button 
+                onClick={closeAyraPopup}
+                className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+              >
+                ×
+              </button>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Photo */}
+              <div className="md:col-span-1">
+                <img 
+                  src="/Ayra.png" 
+                  alt="Ayra Binti Mohammed" 
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="md:col-span-2">
+                <h3 className="text-3xl font-bold text-teal-700 mb-2">
+                  Ayra Binti Mohammed
+                </h3>
+                <p className="text-xl text-gray-800 mb-4 leading-relaxed">
+                  Co-Founder<br />
+                  Executive Director<br />
+                  (Product Experience, Data and Marketing)
+                </p>
+                
+                <div className="mb-6">
+                  <p className="text-gray-700 mb-2">
+                    <strong>Email:</strong> ayra_mohammed@tinyeqn.com
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Phone:</strong> (65) 8801 0392
+                  </p>
+                  
+                  {/* LinkedIn Icon */}
+                  <a href="https://www.linkedin.com/in/ayra-mohammed-a920742a3/" target="_blank" rel="noopener noreferrer" className="inline-block">
+                    <img src="/linkedin_logo.svg" alt="LinkedIn" className="w-7 h-7" />
+                  </a>
+                </div>
+                
+                {/* Full Bio */}
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Ayra co-founded Tiny Equations and today serves as its Executive Director, where she oversees product experience, data, and marketing. She manages teams that collect and process datasets for AI model training, researches user experience, and leads the front-facing design of our solutions. She also heads the company's marketing efforts and manages our social media platforms, ensuring that Tiny Equations connects effectively with teachers, students, and the wider community.
+                  </p>
+                  
+                  <p>
+                    Before Tiny Equations, Ayra built experience as a marketing manager and was actively involved in education. She worked as a private tutor, advocated for STEM education, organised workshops, and collaborated in expanding Candellar's presence into Singapore with Koko. Her passion for education and community work continues to guide her mission at Tiny Equations—making quality learning accessible to all.
+                  </p>
+                  
+                  <p>
+                    Currently a Year 3 undergraduate at the Singapore University of Technology and Design (SUTD), Ayra is pursuing a Bachelor of Engineering in Engineering Systems Design, specialising in Business Analytics and Operations Research. Her strong interest in the STEM space, paired with her background in both marketing and education, allows her to bridge technical development with user-focused design.
+                  </p>
+                  
+                  <p>
+                    At Tiny Equations, Ayra combines her expertise in data, marketing, and product experience to ensure that every solution is not only technically robust but also resonates with the needs of students, teachers, and wider communities.
                   </p>
                 </div>
               </div>
