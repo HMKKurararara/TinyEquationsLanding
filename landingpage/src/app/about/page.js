@@ -30,10 +30,10 @@ export default function AboutPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                <h1 className="text-3xl lg:text-3xl xl:text-5xl font-bold text-gray-900 leading-tight mb-4">
                   Tiny Equations, a mission-driven startup that leverages AI to empower learners.
                 </h1>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-3xl text-gray-700 leading-relaxed">
                   Breaking Barriers, Building Brilliance
                 </p>
               </motion.div>
@@ -60,9 +60,8 @@ export default function AboutPage() {
               {/* Illustration */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
                 className="relative"
               >
                 <img 
@@ -75,9 +74,8 @@ export default function AboutPage() {
               {/* Mission */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <div className="mb-8">
                   <div className="flex items-center mb-4">
@@ -103,9 +101,8 @@ export default function AboutPage() {
               {/* Our Values */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               >
                 <div className="flex items-center mb-6">
                   <img 
@@ -143,9 +140,8 @@ export default function AboutPage() {
               {/* Our Vision */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
               >
                 <div className="flex items-center mb-6">
                   <img 
@@ -198,7 +194,7 @@ export default function AboutPage() {
                 <img 
                   src="/bsf_clipart.svg" 
                   alt="BSF Clipart" 
-                  className="w-72 h-auto rounded-2xl mb-6"
+                  className="w-72 h-auto rounded-2xl mb-6 mx-auto"
                 />
               </motion.div>
               
@@ -210,9 +206,9 @@ export default function AboutPage() {
                 className="relative"
               >
                 <img 
-                  src="/sud_rock.svg" 
+                  src="/sutd_rock.svg" 
                   alt="SUTD Rock" 
-                  className="w-60 h-auto rounded-2xl mb-6"
+                  className="w-60 h-auto rounded-2xl mb-6 mx-auto"
                 />
                 
                 <p className="text-lg text-gray-700 leading-relaxed">

@@ -17,8 +17,8 @@ export default function Header() {
           />
         </Link>
         
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        {/* Desktop Navigation and CTA Button */}
+        <div className="hidden md:flex items-center space-x-8">
           <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors">
             Home
           </Link>
@@ -31,10 +31,6 @@ export default function Header() {
           <Link href="/newsletters" className="text-gray-700 hover:text-gray-900 transition-colors">
             Newsletters
           </Link>
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
           <Link 
             href="/contact" 
             className="bg-yellow-400 text-black px-6 py-2 rounded-lg hover:bg-yellow-500 transition-colors font-medium"

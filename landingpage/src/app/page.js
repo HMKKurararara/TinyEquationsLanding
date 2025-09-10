@@ -38,9 +38,16 @@ export default function Home() {
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                   Our solutions—from AI Tutors to Question Generation—adapt to each student's unique pace and style, making self-directed learning a reality.
                 </p>
-                <p className="bg-yellow-300 text-black px-4 py-2 rounded-md font-medium shadow-sm inline-block">
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://forms.office.com/r/vn9qsLSYKz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg inline-block cursor-pointer"
+                >
                   Join us in igniting a new era of learning with no boundaries!
-                </p>
+                </motion.a>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -163,37 +170,37 @@ export default function Home() {
                       <img 
                         src="/syllabus_aligned_clipart.svg" 
                         alt={feature.title} 
-                        className="h-20 w-20"
+                        className="h-22 w-22"
                       />
                     ) : feature.title === "Self-Directed Learning" ? (
                       <img 
                         src="/self-directed_clipart.svg" 
                         alt={feature.title} 
-                        className="h-20 w-20"
+                        className="h-22 w-22"
                       />
                     ) : feature.title === "Get Feedback Along the Way" ? (
                       <img 
                         src="/feedback_clipart.svg" 
                         alt={feature.title} 
-                        className="h-20 w-20"
+                        className="h-22 w-22"
                       />
                     ) : feature.title === "AI-Powered Insights" ? (
                       <img 
                         src="/insights_clipart.svg" 
                         alt={feature.title} 
-                        className="h-20 w-20"
+                        className="h-22 w-22"
                       />
                     ) : feature.title === "Free to Start, Fair to Grow" ? (
                       <img 
                         src="/free_clipart.svg" 
                         alt={feature.title} 
-                        className="h-20 w-20"
+                        className="h-22 w-22"
                       />
                     ) : feature.title === "Scalability and Adaptability" ? (
                       <img 
                         src="/scale_clipart.png" 
                         alt={feature.title} 
-                        className="h-20 w-20"
+                        className="h-22 w-22"
                       />
                     ) : (
                       <div className="text-4xl text-center">{feature.icon}</div>
@@ -273,26 +280,18 @@ export default function Home() {
                 of education together!
               </h2>
               <p className="text-lg text-gray-700 mb-12 leading-relaxed max-w-2xl mx-auto">
-                We would love for you to join us on our mission to leverage AI to empower self-directed learning for learners from all backgrounds. So if you share our vision, do help us by entering your email below so that we can send you our mailing list for development updates and beta testing of our product!
+                We would love for you to join us on our mission to leverage AI to empower self-directed learning for learners from all backgrounds. So if you share our vision, do help us by joining our mailing list to receive development updates and beta testing opportunities for our product!
               </p>
-              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email here..."
-                  className="flex-1 px-6 py-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent placeholder-gray-500 text-black"
-                  required
-                />
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  type="submit"
-                  className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg"
-                >
-                  Join mailing list
-                </motion.button>
-              </form>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://forms.office.com/r/vn9qsLSYKz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg inline-block mx-auto"
+              >
+                Join mailing list
+              </motion.a>
             </motion.div>
           </div>
         </section>
