@@ -3,17 +3,16 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: 
       - 'build'
-      - '--no-cache'
       - '-t'
-      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
-      - './landingpage'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/landingpage:$COMMIT_SHA'
+      - '.'
       - '-f'
-      - './landingpage/Dockerfile'
+      - 'Dockerfile'
     id: 'Build'
 
   # Push the Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA']
+    args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/landingpage:$COMMIT_SHA']
     id: 'Push'
 
   # Deploy to Cloud Run
@@ -21,29 +20,28 @@ steps:
     entrypoint: 'gcloud'
     args:
       - 'run'
-      - 'services'
-      - 'update'
-      - '$_SERVICE_NAME'
-      - '--platform=managed'
-      - '--image=$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
-      - '--labels=managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$COMMIT_SHA,gcb-build-id=$BUILD_ID,gcb-trigger-id=$_TRIGGER_ID'
-      - '--region=$_DEPLOY_REGION'
-      - '--quiet'
+      - 'deploy'
+      - 'landingpage'
+      - '--image'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/landingpage:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '3000'
+      - '--memory'
+      - '1Gi'
+      - '--cpu'
+      - '1'
+      - '--max-instances'
+      - '100'
     id: 'Deploy'
 
 # Images to be pushed to Artifact Registry
 images:
-  - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$_REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
-
-# Substitutions (these will be provided by the trigger)
-substitutions:
-  _REPO_NAME: 'landingpage'
-  _AR_HOSTNAME: 'us-central1-docker.pkg.dev'
-  _AR_PROJECT_ID: 'tinyeqn-landing-page'
-  _AR_REPOSITORY: 'cloud-run-source-deploy'
-  _DEPLOY_REGION: 'us-central1'
-  _PLATFORM: 'managed'
-  _SERVICE_NAME: 'landingpage'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/landingpage:$COMMIT_SHA'
 
 # Build options
 options:
