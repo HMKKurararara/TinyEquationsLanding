@@ -106,6 +106,20 @@ export default function Home() {
                     className="h-12 w-auto"
                   />
                 </div>
+                <div className="h-16 px-8 flex items-center">
+                  <img 
+                    src="/vie_logo.webp" 
+                    alt="VIE" 
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="h-16 px-8 flex items-center">
+                  <img 
+                    src="/lkycic_logo.png" 
+                    alt="LKY CIC" 
+                    className="h-12 w-auto"
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
