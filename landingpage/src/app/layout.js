@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Tiny Equations | Breaking Barriers, Building Brilliance",
   description: "A mission-driven startup leveraging AI to empower learners worldwide. Transforming education through innovative AI-powered learning solutions.",
-  keywords: "AI education, machine learning, personalized learning, educational technology, AI tutoring, student empowerment",
+  keywords: "Tiny Equations, AI education, machine learning, personalized learning, educational technology, AI tutoring, student empowerment",
   authors: [{ name: "Tiny Equations" }],
   creator: "Tiny Equations",
   publisher: "Tiny Equations",
