@@ -108,7 +108,7 @@ export default function Home() {
                 </div>
                 <div className="h-16 px-8 flex items-center">
                   <img 
-                    src="/vie_logo.webp" 
+                    src="/vie_new.jpeg" 
                     alt="VIE" 
                     className="h-12 w-auto"
                   />
