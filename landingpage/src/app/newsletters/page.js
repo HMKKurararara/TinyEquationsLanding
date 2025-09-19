@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Header from '../../components/Header';
 import Link from 'next/link';
+import linkedinPosts from '../../data/linkedin-posts.json';
 
 export default function Newsletters() {
   return (
@@ -39,59 +40,32 @@ export default function Newsletters() {
               
               {/* LinkedIn Posts Grid */}
               <div className="space-y-8">
-                {/* LinkedIn Post Embed 1 - Replace with your actual post URLs */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-white rounded-lg shadow-lg p-6 border border-gray-200"
-                >
-                  <iframe 
-                    src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7337845224234172419"
-                    height="400" 
-                    width="100%" 
-                    style={{border: 0}}
-                    allowFullScreen="" 
-                    title="Embedded post"
-                    className="rounded-lg"
-                  ></iframe>
-                </motion.div>
-
-                {/* LinkedIn Post Embed 2 */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="bg-white rounded-lg shadow-lg p-6 border border-gray-200"
-                >
-                  <iframe 
-                    src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7315190471780093953"
-                    height="400" 
-                    width="100%" 
-                    style={{border: 0}}
-                    allowFullScreen="" 
-                    title="Embedded post"
-                    className="rounded-lg"
-                  ></iframe>
-                </motion.div>
-
-                {/* LinkedIn Post Embed 3 */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="bg-white rounded-lg shadow-lg p-6 border border-gray-200"
-                >
-                  <iframe 
-                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:YOUR_POST_ID_3"
-                    height="400" 
-                    width="100%" 
-                    style={{border: 0}}
-                    allowFullScreen="" 
-                    title="Embedded post"
-                    className="rounded-lg"
-                  ></iframe>
-                </motion.div>
+                {linkedinPosts.posts.map((post, index) => {
+                  // Skip posts with placeholder IDs
+                  if (post.id.includes('YOUR_POST_ID')) {
+                    return null;
+                  }
+                  
+                  return (
+                    <motion.div
+                      key={post.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                      className="bg-white rounded-lg shadow-lg p-6 border border-gray-200"
+                    >
+                      <iframe 
+                        src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${post.id}`}
+                        height="400" 
+                        width="100%" 
+                        style={{border: 0}}
+                        allowFullScreen="" 
+                        title={post.title || "LinkedIn Embedded Post"}
+                        className="rounded-lg"
+                      ></iframe>
+                    </motion.div>
+                  );
+                })}
               </div>
               
               {/* View More on LinkedIn */}

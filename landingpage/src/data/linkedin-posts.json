@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": "7337845224234172419",
+      "title": "Latest Newsletter Update",
+      "description": "Our recent developments and insights"
+    },
+    {
+      "id": "7315190471780093953",
+      "title": "Education Innovation",
+      "description": "Breaking barriers in AI education"
+    },
+    {
+      "id": "YOUR_POST_ID_3",
+      "title": "Third Post",
+      "description": "Replace with actual post ID"
+    }
+  ],
+  "instructions": {
+    "howToUpdate": [
+      "1. Find your LinkedIn post URL (e.g., https://www.linkedin.com/posts/...)",
+      "2. Extract the activity ID from the URL",
+      "3. Replace the 'id' field above with the new activity ID",
+      "4. Update the title and description for reference",
+      "5. The website will automatically use the new posts"
+    ],
+    "findingActivityId": [
+      "Method 1: Look for 'activity:' followed by numbers in the LinkedIn URL",
+      "Method 2: Use developer tools to inspect the embed code",
+      "Method 3: Contact support if you need help extracting IDs"
+    ]
+  }
+}
