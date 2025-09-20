@@ -1,19 +1,19 @@
 {
   "posts": [
     {
-      "id": "7337845224234172419",
+      "id": "7375164303429193728",
       "title": "Latest Newsletter Update",
+      "description": "Breaking Barriers, Building Brilliance - newest update"
+    },
+    {
+      "id": "7337845224234172419",
+      "title": "Recent Development",
       "description": "Our recent developments and insights"
     },
     {
       "id": "7315190471780093953",
       "title": "Education Innovation",
       "description": "Breaking barriers in AI education"
-    },
-    {
-      "id": "YOUR_POST_ID_3",
-      "title": "Third Post",
-      "description": "Replace with actual post ID"
     }
   ],
   "instructions": {

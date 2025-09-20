@@ -100,22 +100,23 @@ export default function Contact() {
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 4v10a2 2 0 002 2h6a2 2 0 002-2V8M7 8h10M12 12v4" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">Follow Us</h3>
-                      <div className="flex space-x-4">
-                        <a href="https://www.facebook.com/tinyeqn" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-teal-600 transition-colors">
-                          <img src="/facebook_icon.svg" alt="Facebook" className="w-6 h-6" />
+                      <div className="flex space-x-3">
+                        <a href="https://www.facebook.com/tinyeqn" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-blue-600 rounded-lg transition-all duration-300">
+                          <img src="/facebook_icon.svg" alt="Facebook" className="w-5 h-5 group-hover:brightness-0 group-hover:invert transition-all duration-300" />
                         </a>
-                        <a href="https://www.instagram.com/tinyeqn/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-teal-600 transition-colors">
-                          <img src="/instagram_icon.svg" alt="Instagram" className="w-6 h-6" />
+                        <a href="https://www.instagram.com/tinyeqn/" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-yellow-500 rounded-lg transition-all duration-300">
+                          <img src="/instagram_icon.svg" alt="Instagram" className="w-5 h-5 group-hover:brightness-0 group-hover:invert transition-all duration-300" />
                         </a>
-                        <a href="https://linkedin.com/company/tinyeqn" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-teal-600 transition-colors">
-                          <img src="/linkedin_logo.svg" alt="LinkedIn" className="w-6 h-6" />
+                        <a href="https://linkedin.com/company/tinyeqn" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-blue-700 rounded-lg transition-all duration-300">
+                          <img src="/linkedin_logo.svg" alt="LinkedIn" className="w-5 h-5 group-hover:brightness-0 group-hover:invert transition-all duration-300" />
                         </a>
                       </div>
+                      <p className="text-sm text-gray-500 mt-2">Stay connected with our latest updates and insights</p>
                     </div>
                   </div>
                 </div>

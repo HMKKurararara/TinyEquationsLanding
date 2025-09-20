@@ -46,7 +46,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg inline-block cursor-pointer"
                 >
-                  Join us in igniting a new era of learning with no boundaries!
+                  Join Us In Igniting a New Era of Learning With No Boundaries!
                 </motion.a>
               </motion.div>
               <motion.div
@@ -56,7 +56,7 @@ export default function Home() {
                 className="relative"
               >
                 <img 
-                  src="/main1.svg" 
+                  src="/Tiny Equations.svg" 
                   alt="Learning Innovation" 
                   className="w-full h-auto max-w-lg mx-auto"
                 />
@@ -117,6 +117,13 @@ export default function Home() {
                   <img 
                     src="/lkycic_logo.png" 
                     alt="LKY CIC" 
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div className="h-16 px-8 flex items-center">
+                  <img 
+                    src="/sva_logo.png" 
+                    alt="SVA" 
                     className="h-12 w-auto"
                   />
                 </div>
@@ -257,7 +264,7 @@ export default function Home() {
                     whileTap={{ scale: 0.95 }}
                     className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg"
                   >
-                    Learn more about our solutions
+                    Learn More About Our Solutions
                   </motion.button>
                 </Link>
               </motion.div>
@@ -304,7 +311,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg inline-block mx-auto"
               >
-                Join mailing list
+                Join Our Mailing List
               </motion.a>
             </motion.div>
           </div>
