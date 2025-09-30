@@ -5,6 +5,12 @@ import Header from '../../components/Header';
 import Link from 'next/link';
 import linkedinPosts from '../../data/linkedin-posts.json';
 
+export const metadata = {
+  title: "Newsletters & Updates | Tiny Equations",
+  description: "Stay updated with Tiny Equations' latest developments, educational insights, and product updates through our newsletters and LinkedIn posts.",
+  keywords: "Tiny Equations newsletter, education updates, AI learning news, company updates, educational insights",
+};
+
 export default function Newsletters() {
   return (
     <div className="min-h-screen">

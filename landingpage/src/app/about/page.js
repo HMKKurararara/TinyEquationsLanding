@@ -4,6 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Header from '../../components/Header';
 
+export const metadata = {
+  title: "About Us - Our Mission, Vision & Team | Tiny Equations",
+  description: "Learn about Tiny Equations' mission to make self-directed learning accessible through AI. Meet our founding team Matthew, Koko, and Ayra who are breaking barriers in education.",
+  keywords: "Tiny Equations team, AI education mission, self-directed learning, educational innovation, Matthew Phua, Htet Myat Ko Ko, Ayra Mohammed",
+};
+
 export default function AboutPage() {
   const [isMatthewPopupOpen, setIsMatthewPopupOpen] = useState(false);
   const [isKokoPopupOpen, setIsKokoPopupOpen] = useState(false);
