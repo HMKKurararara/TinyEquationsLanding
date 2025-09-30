@@ -4,6 +4,12 @@ import { motion } from 'framer-motion';
 import Header from '../../components/Header';
 import Link from 'next/link';
 
+export const metadata = {
+  title: "AI Learning Solutions & Products | Tiny Equations",
+  description: "Discover Tiny Equations' AI-powered educational solutions including AI Tutors, Question Generation, and thinking-driven learning tools. Transforming self-directed education.",
+  keywords: "AI tutoring, question generation, educational AI solutions, self-directed learning tools, AI education platform, personalized learning",
+};
+
 export default function Solutions() {
   return (
     <div className="min-h-screen">
