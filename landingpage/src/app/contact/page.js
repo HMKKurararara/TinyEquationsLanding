@@ -1,19 +1,21 @@
 // src/app/contact/page.js
 'use client';
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import Header from '../../components/Header';
 import Link from 'next/link';
 
-export const metadata = {
-  title: "Contact Us - Get in Touch | Tiny Equations",
-  description: "Contact Tiny Equations for partnerships, collaborations, or questions about our AI-powered educational solutions. Connect with our team Matthew, Koko, and Ayra.",
-  keywords: "contact Tiny Equations, educational partnerships, AI learning collaboration, get in touch, team contact",
-};
 
 export default function Contact() {
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>Contact Us - Get in Touch | Tiny Equations</title>
+        <meta name="description" content="Contact Tiny Equations for partnerships, collaborations, or questions about our AI-powered educational solutions. Connect with our team Matthew, Koko, and Ayra." />
+        <meta name="keywords" content="contact Tiny Equations, educational partnerships, AI learning collaboration, get in touch, team contact" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
       <Header />
       
       <main>
@@ -276,6 +278,7 @@ export default function Contact() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
