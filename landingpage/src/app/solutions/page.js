@@ -1,20 +1,13 @@
 // src/app/solutions/page.js
 'use client';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import Link from 'next/link';
 
 
 export default function Solutions() {
   return (
-    <>
-      <Head>
-        <title>AI Learning Solutions & Products | Tiny Equations</title>
-        <meta name="description" content="Discover Tiny Equations' AI-powered educational solutions including AI Tutors, Question Generation, and thinking-driven learning tools. Transforming self-directed education." />
-        <meta name="keywords" content="AI tutoring, question generation, educational AI solutions, self-directed learning tools, AI education platform, personalized learning" />
-      </Head>
-      <div className="min-h-screen">
+    <div className="min-h-screen">
       <Header />
       
       <main>
@@ -103,7 +96,6 @@ export default function Solutions() {
           </div>
         </section>
       </main>
-      </div>
-    </>
+    </div>
   );
 }

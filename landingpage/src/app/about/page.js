@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import Header from '../../components/Header';
 
 
@@ -19,13 +18,7 @@ export default function AboutPage() {
   const closeAyraPopup = () => setIsAyraPopupOpen(false);
 
   return (
-    <>
-      <Head>
-        <title>About Us - Our Mission, Vision & Team | Tiny Equations</title>
-        <meta name="description" content="Learn about Tiny Equations' mission to make self-directed learning accessible through AI. Meet our founding team Matthew, Koko, and Ayra who are breaking barriers in education." />
-        <meta name="keywords" content="Tiny Equations team, AI education mission, self-directed learning, educational innovation, Matthew Phua, Htet Myat Ko Ko, Ayra Mohammed" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       <Header />
       
       <main>
@@ -698,7 +691,6 @@ export default function AboutPage() {
           </div>
         </div>
       </footer>
-      </div>
-    </>
+    </div>
   );
 }

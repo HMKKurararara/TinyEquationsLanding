@@ -20,12 +20,19 @@ export const metadata = {
   publisher: "Tiny Equations",
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
     ],
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon.ico',
+      },
+    ],
   },
   openGraph: {
     title: "Tiny Equations | Breaking Barriers, Building Brilliance",
@@ -45,11 +52,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.ico" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
