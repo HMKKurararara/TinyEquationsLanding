@@ -1,7 +1,6 @@
 // src/app/newsletters/page.js
 'use client';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import Link from 'next/link';
 import linkedinPosts from '../../data/linkedin-posts.json';
@@ -9,13 +8,7 @@ import linkedinPosts from '../../data/linkedin-posts.json';
 
 export default function Newsletters() {
   return (
-    <>
-      <Head>
-        <title>Newsletters & Updates | Tiny Equations</title>
-        <meta name="description" content="Stay updated with Tiny Equations' latest developments, educational insights, and product updates through our newsletters and LinkedIn posts." />
-        <meta name="keywords" content="Tiny Equations newsletter, education updates, AI learning news, company updates, educational insights" />
-      </Head>
-      <div className="min-h-screen">
+    <div className="min-h-screen">
       <Header />
       
       <main>
@@ -200,7 +193,6 @@ export default function Newsletters() {
           </div>
         </div>
       </footer>
-      </div>
-    </>
+    </div>
   );
 }
